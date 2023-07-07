@@ -11,10 +11,11 @@ options = webdriver.ChromeOptions()
 service = Service(executable_path='/Users/egorkarinkin/PycharmProjects/Birzja/main/')
 
 # add proxy
-#options.add_argument('--proxy-server=46.29.165.166:8123')
+# options.add_argument('--proxy-server=46.29.165.166:8123') - нужен нормальный прокси
 
 # disable webdriver mode
-##options.add_experimental_option('useAutomationExtension', False)
+options.add_experimental_option('excludeSwitches', ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
 
 driver = webdriver.Chrome(service=service, options=options)
 
@@ -23,8 +24,8 @@ def get_data(arr) -> list:
     """Эта функция возвращает список из цен всех нужных нам акций"""
 
     res_arr = []
-
     try:
+
         for i in arr:
             driver.get(url=f'https://www.tinkoff.ru/invest/stocks/{i}/')
             driver.maximize_window()
