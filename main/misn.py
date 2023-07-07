@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import sqlite3
 
-
 arr_actions = ['OZON', 'SBER', 'ROSN', 'TATN']
 arr_count = [2, 20, 2, 2]
 options = webdriver.ChromeOptions()
