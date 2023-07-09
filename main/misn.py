@@ -24,8 +24,8 @@ def get_data(arr) -> list:
     """Эта функция возвращает список из цен всех нужных нам акций"""
 
     res_arr = []
-    try:
 
+    try:
         for i in arr:
             driver.get(url=f'https://www.tinkoff.ru/invest/stocks/{i}/')
             driver.maximize_window()
@@ -52,7 +52,7 @@ def get_data(arr) -> list:
 
 def one_time():
 
-    """Эта функция создает базуданных и
+    """Эта функция создает базу данных и
      вносит туда Названия акций который находятся
       в arr_actions и вводит их актуальное значение"""
 
@@ -82,6 +82,7 @@ def main():
     """
 
     db: Connection = sqlite3.connect('statistic.db')
+
     try:
         cursor = db.cursor()
 
