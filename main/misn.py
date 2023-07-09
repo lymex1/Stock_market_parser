@@ -13,7 +13,7 @@ service = Service(executable_path='/Users/egorkarinkin/PycharmProjects/Birzja/ma
 # add proxy
 # options.add_argument('--proxy-server=46.29.165.166:8123') - нужен нормальный прокси
 
-# disable webdriver mode
+"""disable webdriver mode"""
 options.add_experimental_option('excludeSwitches', ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 
